@@ -42,11 +42,12 @@ surfaces_txt_unite.unite = (surfaces_txt) ->
 	for line in other_lines
 		result_txt += line + '\r\n'
 	for scope, lines of surface_lines
-		result_txt += scope + '\r\n'
-		result_txt += '{' + '\r\n'
-		for line in lines
-			result_txt += line + '\r\n'
-		result_txt += '}' + '\r\n'
+		if lines.length
+			result_txt += scope + '\r\n'
+			result_txt += '{' + '\r\n'
+			for line in lines
+				result_txt += line + '\r\n'
+			result_txt += '}' + '\r\n'
 	for scope, lines of surface_lines_in_scopes
 		result_txt += scope + '\r\n'
 		result_txt += '{' + '\r\n'
