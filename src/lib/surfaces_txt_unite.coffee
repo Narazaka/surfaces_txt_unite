@@ -40,8 +40,15 @@ surfaces_txt_unite.unite = (surfaces_txt) ->
 		for index in delete_index
 			lines.splice index, 1
 	result_txt = ''
+	continuous_empty_line_count = 0
 	for line in other_lines
-		result_txt += line + '\r\n'
+		if line.length
+			continuous_empty_line_count = 0
+			result_txt += line + '\r\n'
+		else
+			continuous_empty_line_count++
+			if continuous_empty_line_count <= 5
+				result_txt += line + '\r\n'
 	for scope, lines of surface_lines
 		if lines.length
 			result_txt += scope + '\r\n'
