@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title surfaces_txt2yaml
+		link(rel="stylesheet", href="surfaces_txt_unite.css")
+		script(src="lib/surfaces_txt_unite.js")
+		script(src="lib/miniajax.nodollar.js")
+		script(src="surfaces_txt_unite_web.js")
+	body
+		h1 surfaces_txt_unite
+		p
+			a(href="https://github.com/Narazaka/surfaces_txt_unite.git", target="_blank") fork me on Github
+		p surfaces.txt -&gt; surfaces.txt united
+		p
+			input(type="button", value="set example txt")#set_example
+		p
+			textarea(cols="32", rows="20")#txt
+			input(type="button", value="txt -> unite")#to
+			textarea(cols="32", rows="20")#united
