@@ -23,13 +23,14 @@ surfaces_txt_unite.unite = (surfaces_txt) ->
 			other_lines.push line
 	surface_lines_in_scopes = {}
 	for line, scopes of surface_lines_union
-		if scopes.length > 1
-			scope = scopes.sort().join(', ')
-			unless surface_lines_in_scopes[scope]?
-				surface_lines_in_scopes[scope] = []
-			surface_lines_in_scopes[scope].push line
-		else
-			delete surface_lines_union[line]
+		if line.length
+			if scopes.length > 1
+				scope = scopes.sort().join(', ')
+				unless surface_lines_in_scopes[scope]?
+					surface_lines_in_scopes[scope] = []
+				surface_lines_in_scopes[scope].push line
+			else
+				delete surface_lines_union[line]
 	for scope, lines of surface_lines
 		delete_index = []
 		for line, index in lines
