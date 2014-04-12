@@ -8,7 +8,7 @@ surfaces_txt_unite.unite = (surfaces_txt) ->
 	other_lines = []
 	for line, index in txt_lines
 		if line.match /^surface/
-			scope = line.replace /{/, ''
+			scope = line.replace(/\.append/, '').replace(/{/, '')
 			surface_lines[scope] = []
 		else if scope? && line.match /^}/
 			scope = null
