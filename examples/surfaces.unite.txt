@@ -49,7 +49,7 @@ surface50
 {
 element1,overlayfast,surface1500.png,30,50
 }
-surface0, surface1, surface2, surface5, surface50
+surface0,surface1,surface2,surface5,surface50
 {
 point.centerx,0
 point.centery,0
@@ -62,16 +62,16 @@ sakura.balloon.offsety,0
 balloon.offsetx,0
 balloon.offsety,0
 element0,overlay,surface0.png,0,0
+collisionex1,face,polygon,30,50,80,55,80,85,30,85
+collisionex2,kata,ellipse,80,100,90,110
 animation0.interval,random,10
 animation0.option,exclusive
 animation0.pattern0,overlay,1001,125,40,55
 animation0.pattern1,overlay,1002,125,40,55
 animation0.pattern2,overlay,-1
 animation0.collision0,40,55,75,70,mabuta
-collisionex1,face,polygon,30,50,80,55,80,85,30,85
-collisionex2,kata,ellipse,80,100,90,110
 }
-surface0, surface1, surface5
+surface0,surface1,surface5
 {
 collision0,20,110,100,130,bust
 }
