@@ -24,7 +24,7 @@ surfaces_txt_unite.unite = (surfaces_txt) ->
 				continue
 			# animation
 			result = null
-			if result = line.match /^(?:animation)?(\d+)\.?(interval|pattern|option|collision)/
+			if result = line.match /^\s*(?:animation)?(\d+)\.?(interval|pattern|option|collision)/
 				animation_id = result[1]
 				unless surface_lines_animation[scope]?
 					surface_lines_animation[scope] = {}
